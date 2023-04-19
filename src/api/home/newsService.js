@@ -1,4 +1,5 @@
 import request from "@/utils/request";
+import config from "@/config";
 
 // http api
 const urlLists = {
@@ -6,7 +7,9 @@ const urlLists = {
 };
 
 const getNews = (params) => {
-  return request.post(urlLists.getNews, params, false);
+  return request.post(urlLists.getNews, params, false, {
+    baseURL: config.api["drass"],
+  });
 };
 
 export default {

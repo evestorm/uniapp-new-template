@@ -66,6 +66,13 @@
     "mp-toutiao" : {
         "usingComponents" : true
     },
+    "h5": {
+        "publicPath": "/h5/",
+        "router": {
+            "base": "/h5/",
+            "mode": "hash"
+        }
+    },
     "uniStatistics": {  
         "enable": false
     },
