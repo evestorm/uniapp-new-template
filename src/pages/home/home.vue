@@ -30,7 +30,7 @@
         </view>
       </view>
       <view class="header-right h-100 d-flex flex-column ml-auto j-sb">
-        <view class="btn-wrapper a-self-end">
+        <view class="btn-wrapper a-self-end" @click="gotoSubPage">
           <!-- 签到 -->
           <view class="btn-inner d-flex j-center a-center">
             <image class="img mr-1" src="/static/images/签到.png" mode="" />
@@ -173,6 +173,11 @@ onShow(() => {
     // checkLocation();
   }
 });
+const gotoSubPage = () => {
+  uni.navigateTo({
+    url: `/pages/homeSub/subPage/subPage?title=Lance`,
+  });
+};
 const getNews = async () => {
   let [, result] = await home.getNews();
   if (result) {
